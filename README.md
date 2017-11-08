@@ -80,7 +80,7 @@ Codes in the names are interpreted as follows:
 
 ### Variants by scenario
 
-![Scenarios for CAWA modelling](BCR14 CAWA spatial model flowchart.jpg/)
+![Scenarios for CAWA modelling](https://github.com/borealbirds/cawa-bcr-14/raw/master/BCR14%20CAWA%20spatial%20model%20flowchart.jpg)
 
 #### General conservation model development
 
