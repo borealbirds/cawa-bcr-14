@@ -1,23 +1,23 @@
 # Canada Warbler BCR14 Zonation Project Metadata and Workflow
 
-This project originated from work on the Canada Warbler International Conservation Initiative (CWICI) towards a full life-cycle conservation plan. The preparation of these maps was contributed to in part by Environment and Climate Change Canada (ECCC) with a contract to High Branch Conservation Services. We thank the fifteen conservation, wildlife, and forestry professionals from six regions (provinces and states) who provided their opinions via an expert survey. We also thank the [Boreal Avian Modelling Project](http://www.borealbirds.ca) for data hosting and modelling support.
+This project originated from work on the Canada Warbler International Conservation Initiative ([CWICI](https://naturecanada.ca/tag/canada-warbler-international-conservation-initiative/)) towards a full life-cycle conservation plan. The preparation of these maps was contributed to in part by Environment and Climate Change Canada ([ECCC](https://www.ec.gc.ca/)) with a contract to [High Branch Conservation Services](http://highbranchconservation.com/). We thank the fifteen conservation, wildlife, and forestry professionals from six regions (provinces and states) who provided their opinions via an expert survey. We also thank the [Boreal Avian Modelling Project](http://www.borealbirds.ca) for data hosting and modelling support.
 
-Reports summarizing the methods and findings of this work can be found at the [project website](http://www.borealbirds.ca/index.php/species-at-risk). This github repository includes data and code only: Please refer to the website for explanations of variables, interpretations, and updates.
+Reports summarizing the methods and findings of this work can be found at the [project website](http://www.borealbirds.ca/index.php/species-at-risk). This GitHub repository includes data and code only: Please refer to the website for explanations of variables, interpretations, and updates.
 
 _Project collaborators:_
 
-* Dr. Alana Westwood (PI), a.westwood@dal.ca
+* Dr. Alana Westwood (PI), [a.westwood@dal.ca](mailto=a.westwood@dal.ca)
 * Dan Lambert
 * Dr. Len Reitsma
 * Kara Pearson
 
 ## Overview
 
-This process log refers to steps applied using the program Zonation, whose core, user manuals, and supporting documents can be downloaded for free at https://github.com/cbig/zonation-core.
+This process log refers to steps applied using the program Zonation, whose core, user manuals, and supporting documents can be downloaded for free at [https://github.com/cbig/zonation-core](https://github.com/cbig/zonation-core).
 
 ## Data pre-processing
 
-All data layers were assembled using ArcGIS 10.3 in a common geodatabase, [BAM_CAWA2016_BCR14.gdb](CAWA Project 2016\BAM_CAWA2016_BCR14.gdb), (not included in data package).
+All data layers were assembled using ArcGIS 10.3 in a common geodatabase, `BAM_CAWA2016_BCR14.gdb`, (not included in data package).
 
 _Environments for all rasters were set to a common extent (sdm.tif) and snap raster, exported at a resolution of 1 km2 with no data values = -9999. Zeroes were assigned as nodata. ArcGIS tools are indicated using ' '_
 
@@ -49,6 +49,7 @@ _Steps completed in [Zonation 4.0](https://github.com/cbig/zonation-core)_.
 Hierarchical mask - could code areas already protected (2), areas available for protection (1), and areas unavailable for protection (0)
 
 ### Variants
+
 _Intermediate analyses, adding components iteratively to catch errors_
 
 1. i_caz_SDM
@@ -105,7 +106,9 @@ Codes in the names are interpreted as follows:
 ### Run settings and notes by variant
 
 Follow links for all run and output files.
+
 #### i. [Species Only](/i_caz_SDM/)
+
 Input feature: [sdm.tif](/data/sdm.tif)
 Mask: [BCR14_mask.tif](/data/bcr14_mask.tif)
 Notes:
@@ -114,6 +117,7 @@ Notes:
 - CAZ was retained
 
 #### ii. [Disturbance Discounting](/ii_cazSDM_cnd/)
+
 Input feature: [sdm.tif](/data/sdm.tif)
 Mask: [BCR14_mask.tif](/data/bcr14_mask.tif)
 Discounting feature: [footprint.tif](/data/footprint.tif)
@@ -121,6 +125,7 @@ Notes:
 - none
 
 #### iii. [Connectivity](/iii_cazSDM_cnd_dbs/)
+
 Input feature: [sdm.tif](/data/sdm.tif)
 Mask: [BCR14_mask.tif](/data/bcr14_mask.tif)
 Discounting feature: [footprint.tif](/data/footprint.tif)
@@ -131,6 +136,7 @@ Notes:
 
 
 #### iv. [Species of Special Interest](/iv_cazSDM_cnd_dbs_ssi/)
+
 Input features: [sdm.tif](/data/sdm.tif), [ssi_CAWA2005.txt](/data/ssi_CAWA2005.txt), [ssi_CAWA2010.txt](/data/ssi_CAWA2010.txt)
 Mask: [BCR14_mask.tif](/data/bcr14_mask.tif)
 Discounting feature: [footprint.tif](/data/footprint.tif)
@@ -141,6 +147,7 @@ Notes:
 - Chose to retain this method to ensure repeatedly used habitats are retained in final models
 
 #### v. [Uncertainty](/v_cazSDM_cnd_dbs_ssi_unc/)
+
 Input features: [sdm.tif](/data/sdm.tif), [ssi_CAWA2005.txt](/data/ssi_CAWA2005.txt), [ssi_CAWA2010.txt](/data/ssi_CAWA2010.txt)
 Mask: [BCR14_mask.tif](/data/bcr14_mask.tif)
 Discounting features: [footprint.tif](/data/footprint.tif), [uncertainty.tif](/data/uncertainty.tif)
@@ -149,6 +156,7 @@ Notes:
 - none
 
 #### C1. [Connectivity to existing protected areas](/C1_gcm_mtx/)
+
 Input features: [sdm.tif](/data/sdm.tif), [ssi_CAWA2005.txt](/data/ssi_CAWA2005.txt), [ssi_CAWA2010.txt](/data/ssi_CAWA2010.txt), [protected.tif](data/protected.tif)
 Mask: [BCR14_mask.tif](/data/bcr14_mask.tif)
 Discounting features: [footprint.tif](/data/footprint.tif), [uncertainty.tif](/data/uncertainty.tif)
@@ -159,6 +167,7 @@ Notes:
 - We experimented with higher weights (0.5, 0.2), but these emphasized the solution too strongly towards protected areas based on visual analysis
 
 #### C2. [Medium-term climate change (2050)](/C1_gcm_mtx_clm/)
+
 Input features: [sdm.tif](/data/sdm.tif), [ssi_CAWA2005.txt](/data/ssi_CAWA2005.txt), [ssi_CAWA2010.txt](/data/ssi_CAWA2010.txt), [protected.tif](data/protected.tif), [clm_current.tif](/data/clm_current.tif), [clm_2050.tif](/data/clm_2050.tif)
 Mask: [BCR14_mask.tif](/data/bcr14_mask.tif)
 Discounting features: [footprint.tif](/data/footprint.tif), [uncertainty.tif](/data/uncertainty.tif)
@@ -168,6 +177,7 @@ Notes:
 - beta value (connectivity) was set at 5km x 36 years, so 180 km, 2/180 000 m = 0.000011
 
 #### C3. [Long-term climate change (2080)](/C1_gcm_mtx_clm/)
+
 Input features: [sdm.tif](/data/sdm.tif), [ssi_CAWA2005.txt](/data/ssi_CAWA2005.txt), [ssi_CAWA2010.txt](/data/ssi_CAWA2010.txt), [protected.tif](data/protected.tif), [clm_current.tif](/data/clm_current.tif), [clm_2080.tif](/data/clm_2050.tif)
 Mask: [BCR14_mask.tif](/data/bcr14_mask.tif)
 Discounting features: [footprint.tif](/data/footprint.tif), [uncertainty.tif](/data/uncertainty.tif)
@@ -176,6 +186,7 @@ Notes:
 - beta value (connectivity) was set at 5km x 66 years, so 330 km, 2/330 000 = 0.000006
 
 #### M1 [Focus on forestry tenures](/M1_gcm_adm/)
+
 Input features: [sdm.tif](/data/sdm.tif), [ssi_CAWA2005.txt](/data/ssi_CAWA2005.txt), [ssi_CAWA2010.txt](/data/ssi_CAWA2010.txt), [protected.tif](data/protected.tif),
 Mask: [BCR14_mask.tif](/data/bcr14_mask.tif), [tenures.tif](/data/tenures.tif)
 Discounting features: [footprint.tif](/data/footprint.tif), [uncertainty.tif](/data/uncertainty.tif)
@@ -185,6 +196,7 @@ Notes:
 - no connectivity to protected areas
 
 #### M2 [Retention areas](/M2_gcm_adm_mtx/)
+
 Input features: [sdm.tif](/data/sdm.tif), [ssi_CAWA2005.txt](/data/ssi_CAWA2005.txt), [ssi_CAWA2010.txt](/data/ssi_CAWA2010.txt), [protected.tif](data/protected.tif), [wetlands.tif](data/wetlands.tif)
 Mask: [BCR14_mask.tif](/data/bcr14_mask.tif), [tenures.tif](/data/tenures.tif)
 Discounting features: [footprint.tif](/data/footprint.tif), [uncertainty.tif](/data/uncertainty.tif)
@@ -193,6 +205,7 @@ Notes:
 - included matrix connectivity to as wet-poor habitats within forestry tenures with a weight of 0.5
 
 #### M3 [Managing for future habitat](/M3_gcm_adm_mtx2/)
+
 Input features: [sdm.tif](/data/sdm.tif),   [wetlands.tif](data/wetlands.tif), [protected.tif](data/protected.tif), [uplands.tif](data/wetlands.tif)
 Mask: [BCR14_mask.tif](/data/bcr14_mask.tif), [tenures.tif](/data/tenures.tif)
 Discounting features: [uncertainty.tif](/data/uncertainty.tif)
@@ -202,4 +215,5 @@ Notes:
 - removed SSI and anthropogenic disturbance
 
 ## Post-Processing/Post-hoc Analysis
+
 *In progress. Please check back for updates.*
