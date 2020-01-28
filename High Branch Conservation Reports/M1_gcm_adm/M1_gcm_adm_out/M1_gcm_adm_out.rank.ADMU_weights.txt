@@ -1,0 +1,6 @@
+WGlobal    W(first ADMU)    W(second ADMU)    .... 
+Note: Mode 2 weights are the effective feature-specific local component.
+1.0000 0.00000 1.00000 
+
+feature x ADMUs representation levels (of total after condition transformation - can sum to <=1.0) (one row per feature, one column per ADMU)
+0.49036 0.26898 

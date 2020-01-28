@@ -1,0 +1,8 @@
+1 1 -1 -1 -1
+1 -1 -1 -1 -1
+1 -1 -1 -1 -1
+1 -1 -1 -1 -1
+2 1 -1 -1 -1
+
+##c1: output group, #c2: condition groupo, c3: retention groups, c4: retention mode, c5: kernel group (distribution smoothing)
+##c6: kernel group (interactions), c7: kernel group (matrix connectivity)

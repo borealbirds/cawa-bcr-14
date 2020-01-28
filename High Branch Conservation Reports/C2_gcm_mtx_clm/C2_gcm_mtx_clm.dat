@@ -1,0 +1,24 @@
+[Settings]
+removal rule = 1
+warp factor  = 1
+edge removal = 1
+annotate name = 0
+
+info-gap proportional = 0
+use info-gap weights = 1
+info-gap weights file = uncertaintyweights.txt
+
+mask missing areas = 1
+area mask file  = ../data/BCR_mask.tif
+
+use groups = 1
+groups file = groups.txt
+
+use condition layer = 1
+condition file = condition_layers.txt
+
+use SSI = 1
+SSI file name = ssi_list.txt
+
+use interactions = 1
+interaction file = "interactions.txt"

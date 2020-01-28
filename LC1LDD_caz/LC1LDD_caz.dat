@@ -1,0 +1,12 @@
+[Settings]
+removal rule = 1
+warp factor  = 1
+edge removal = 1
+annotate name = 0
+
+use SSI = 0
+
+use mask = 0
+
+mask missing areas = 1
+area mask file  = ../data/BCR_mask.tif

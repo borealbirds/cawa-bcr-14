@@ -1,0 +1,4 @@
+List of SSI biodiversity features (e.g. species) and weights used in analysis in order of columns:
+Weight distribution_sum T_violation_fract_remaining map_file_name
+1.000  504.000 0.000000 ../data/ssi_CAWA2005.txt
+1.000  141.000 0.000000 ../data/ssi_CAWA2010.txt

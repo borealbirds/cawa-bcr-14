@@ -1,0 +1,16 @@
+<PAMDataset>
+  <SRS>PROJCS["Canada_Lambert_Conformal_Conic",GEOGCS["GCS_North_American_1983",DATUM["North_American_Datum_1983",SPHEROID["GRS_1980",6378137.0,298.257222101]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Lambert_Conformal_Conic_2SP"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",-96.0],PARAMETER["Standard_Parallel_1",50.0],PARAMETER["Standard_Parallel_2",70.0],PARAMETER["Latitude_Of_Origin",40.0],UNIT["Meter",1.0]]</SRS>
+  <PAMRasterBand band="1">
+    <Description>FM3LDDclipadm</Description>
+    <Histograms>
+      <HistItem>
+        <HistMin>-0.9093325138092041</HistMin>
+        <HistMax>0.6459370851516724</HistMax>
+        <BucketCount>256</BucketCount>
+        <IncludeOutOfRange>1</IncludeOutOfRange>
+        <Approximate>0</Approximate>
+        <HistCounts>1|2|2|1|1|0|0|1|1|2|2|1|0|0|1|0|5|5|0|0|0|2|0|0|1|0|0|0|1|0|2|3|0|1|2|0|0|1|2|0|1|2|0|2|0|1|1|1|0|0|0|3|0|1|2|1|1|1|2|0|4|1|4|2|2|1|0|2|2|2|1|2|0|0|2|1|0|1|5|4|4|6|1|3|5|1|2|0|2|3|6|2|7|3|3|0|13|7|1|7|11|31|7|19|13|10|14|16|25|16|36|35|52|90|79|70|100|111|147|127|133|154|147|181|131|181|266|245|285|258|296|263|270|223|260|256|192|180|196|192|215|258|285|238|306|966|1256|1923|3456|4810|3616|2914|2221|1951|1812|1765|1339|1288|1221|1098|1020|1299|1174|731|652|582|565|730|440|456|376|294|247|246|234|260|169|205|225|199|264|214|174|178|169|160|164|148|143|148|139|146|127|170|120|149|160|164|153|170|174|157|166|158|160|171|180|261|178|213|186|210|244|244|205|240|313|301|296|443|138|154|237|207|333|288|231|400|264|100|62|135|601|760|495|1750|2305|1260|94|42|8|32|4|7|1|0|0|7|43|121|104|76|20|3|3|1</HistCounts>
+      </HistItem>
+    </Histograms>
+  </PAMRasterBand>
+</PAMDataset>

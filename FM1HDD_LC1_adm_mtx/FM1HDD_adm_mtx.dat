@@ -1,0 +1,32 @@
+[Settings]
+removal rule = 1
+warp factor  = 1
+edge removal = 1
+annotate name = 0
+
+mask missing areas = 1
+area mask file  = ../data/BCR_mask.tif
+
+info-gap proportional = 0
+use info-gap weights = 1
+info-gap weights file = uncertaintyweights.txt
+
+use groups = 1
+groups file = groups.txt
+
+use SSI = 1
+SSI file name = ssi_list.txt
+
+[Administrative units]
+use ADMUs = 1
+ADMU descriptions file = ADMU_descriptions.txt
+ADMU layer file = ../data/tenures.tif
+ADMU weight matrix = ADMU_weights.txt
+calculate local weights from condition = 1
+ADMU mode = 2
+Mode 2 global weight = 0.25
+
+[Community analysis settings]
+load similarity matrix = 1
+connectivity similarity matrix file = community_matrix.txt
+apply to connectivity = 1

@@ -1,0 +1,191 @@
+Zonation 4.0.0rc1_compact, build: Sep 19 2014 18:16:13
+==========================================================================
+The Zonation software is distributed in the  hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+==========================================================================
+ For more information and conditions of use of this software, see the
+ disclaimer in Help->About Zonation, in the graphical user interface
+
+Starting Zonation run on 'DESKTOP-UULFA30' at 3:24:15 PM (2017/10/18) 
+Locale is: C
+Zonation core process parameters: 
+   run mode: normal run (-r)
+   settings file: iii_cazSDM_cnd_dbs.dat
+   biodiversity features list file: iii_cazSDM_cnd_dbs.spp
+   output file(s): iii_cazSDM_cnd_dbs_out/iii_cazSDM_cnd_dbs_out
+   info-gap alpha: 0
+   use_smoothing: 1
+   smoothing_alpha_multiplier: 1
+   autoclose (deprecated): 0
+
+Reading settings file: iii_cazSDM_cnd_dbs.dat
+   Option not overriden in command line, removal rule: 1
+   Option not overriden in command line, warp factor: 1
+
+Output settings:
+   Output weighted range size corrected richness map: yes
+   Output proportional loss rank map: no
+
+********** Arbitrary kernels not enabled ********
+
+*************** MASKING ANALYSIS AREAS FROM INPUT FILES **************
+********        Masking according to file ../data/BCR_mask.tif
+
+
+******* Condition layers used. Will load the list of condition layers from file: condition_layers.txt
+
+Loading list of biodiversity features from file: iii_cazSDM_cnd_dbs.spp
+Row count in the features/species list file: 1
+../data/SDM.tif: 956 rows, 1011 columns read. Nodata cells =  528060, sum of elements = 16479.9
+../data/BCR_mask.tif: 956 rows, 1011 columns read. Nodata cells =  762188, sum of elements = 204328
+Analysis area mask loaded.
+
+Matrix columns/x dimension: 1011, rows/y dimension: 956
+*******************************************************
+Loading feature grouping information from groups.txt
+Groups information loaded.
+
+****** REMOVAL RULE: core-area Zonation (CAZ) *******
+
+****** NOT using Info-gap distribution discounting uncertainty analysis ****************
+
+
+*** Not using "drop 0 occurrence features", all features will be processed even if they do not occur anywhere in the analysis area.
+===============
+Note: using the following features which require additional memory for smoothing kernels: distribution smoothing 
+Approximately 73.77 MBs of additional memory are required. Trying to allocate...
+Doing connectivity smoothings: initializing
+Using 1 thread(s) for preprocessing.
+Memory allocated successfully!
+===============
+
+======------ Allocating memory for input layers... ------======
+Using compact structure (lookup version),  sizeof(Occur_Container): 18, sizeof(allocated occurrence): 6
+Counting effective occurrencies
+Time: 1508351055 = 3:24:15 PM (2017/10/18) 
+Feature file #1: ../data/SDM.tif; non-missing cells: 202017
+Total # of feature layers: 1
+Total # of cells in every layer: 966516
+Effective # of cells (cells with any occurrence, globally): 202017
+Total # of occurrencies: 202017, counted across 1 layers; average across layers: 202017
+Percentage of globally effective occurrencies = 100 % (relative to total effective cells) = 20.9016 % (relative to total cells)
+Memory required for biodiversity features:   12 MB, of which base memory: 10.84 MB, and occurrencies require: 1.156 MB
+Time now: 1508351055 = 3:24:15 PM (2017/10/18) 
+Finished preload/counting effective occurrencies. Elapsed: 0 seconds.
+======------ Allocating memory for input layers: finished successfully ------======
+
+******=====----- Loading feature (e.g., species) data layers -----=====**********
+* Loaded biodiversity feature file #1, ../data/SDM.tif, non-missing cells:202017, their sum: 7739.91
+Calculating centers of the distributions of 1 features...
+
+******=====----- Distribution smoothing is on. Transforming input layers... -----=====******
+* Applying distribution smoothing on feature #1, ../data/SDM.tif
+DS connectivity calculations - Kernel calculated; alpha= 0.0004
+Freeing structures required for distribution smoothing... 
+ ...Done.
+******=====----- Finished distribution smoothing transformations in 1 seconds. -----=====******
+
+
+******=====----- 'use condition' is on. Transforming input layers... -----=====******
+
+Loading condition file list from file condition_layers.txt
+
+ * Applying condition layer number 1:
+../data/footprint.tif: 956 rows, 1011 columns read. Nodata cells =  765830, sum of elements = 149433
+Condition layer loaded without errors, count of effective elements (with values in [0,1]) = 200686 , missing (<0) elements count = 765830
+ --- Report on loss of biodiversity feature proportions (by condition transformation) ---
+Feature#  proportion_lost
+1	0.24097
+-----------------------
+The condition transformation with condition layer number 1 was applied to 1 biodiversity features.
+ * Applied condition layer number 1
+
+Read condition layers list file, number of condition layers: 1
+
+Applied condition layers through the landscape.
+Consequently, initial remaining fractions do not necessarily start from 1.
+******=====----- Finished condition transformations in 0 seconds. -----=====******
+
+
+******=====----- Finished loading and transformation of feature data layers -----=====*********
+
+Calculating richness across biodiversity features...
+Done in 0 seconds. Time now: 3:24:16 PM (2017/10/18) 
+Saving raster map of weighted range size corrected richness
+Saving raster: iii_cazSDM_cnd_dbs_out/iii_cazSDM_cnd_dbs_out.wrscr.compressed.tif (GTiff format)
+
+******=====----- Preparing to start the ranking process... -----=====**********
+Note: using edge removal.
+
+Loaded data and initialized in 2 seconds. Current time: 3:24:17 PM (2017/10/18) 
+Cells with data = 202017; locations with missing values = 764499
+
+---------------------======********** RANKING STARTS HERE ***********======-----------------------
+Initially removed cells count = 0
+Note: No initial removal was used.
+
+Biodiversity features performance levels check. Proportions remaining:
+---------
+Feature 1: 0.7590266
+---------
+Minimum proportion remaining: 0.7590266, average: 0.7590266, weighted average: 0.7590266, maximum: 0.7590266
+
+
+The following lines provide information on how the ranking is done by iterative removal of cells, with 6 columns per line:
+Cells removed, proportion of landscape remaining, cost of remaining landscape, edge list length, smallest remaining proportion in all biodiversity features (e.g. species), time elapsed (s)
+----------------------------------------------------------------------------------------------------------------------------
+             0            100%%              0          12750       0.759027            0
+          8080        96.0004%%         193938          12202       0.755756            1
+         16160        92.0007%%         185858          12508       0.750385            3
+         24240        88.0011%%         177778          12585       0.742332            4
+         32320        84.0014%%         169698          13218       0.732037            6
+         40400        80.0018%%         161618          13493       0.719811            8
+         48480        76.0021%%         153538          13511       0.706111            9
+         56560        72.0025%%         145458          13369        0.69031           11
+         64640        68.0029%%         137378          12924       0.672426           13
+         72720        64.0032%%         129298          13342       0.652775           15
+         80800        60.0036%%         121218          13107       0.630596           18
+         88880        56.0039%%         113138          13555       0.606343           22
+         96960        52.0043%%         105058          13359        0.57969           26
+        105040        48.0046%%          96978          13458       0.550963           30
+        113120         44.005%%          88898          13744       0.520049           34
+        121200        40.0053%%          80818          13672       0.487392           38
+        129280        36.0057%%          72738          13341       0.453013           42
+        137360        32.0061%%          64658          11641       0.416078           46
+        145440        28.0064%%          56578          11209       0.377151           49
+        153520        24.0068%%          48498          10909        0.33721           53
+        161600        20.0071%%          40418           9925       0.293059           56
+        169680        16.0075%%          32338           8646       0.245376           59
+        177760        12.0078%%          24258           8219       0.193717           61
+        185840         8.0082%%          16178           6243       0.137505           63
+        193920        4.00856%%           8098           4125      0.0752341           64
+        202000     0.00891089%%             18             18    0.000249955           65
+        202017              0%%              0              0              0           65
+----------------------------------------------------------------------------------------------------------------------------
+Total count of cells removed = 202017
+
+Done in 65 seconds.
+Found 278 ties.
+
+Biodiversity features performance levels check. Proportions remaining:
+---------
+Feature 1:    0
+---------
+Minimum proportion remaining:    0, average:    0, weighted average:    0, maximum:    0
+
+============================================================
+* Writing final output files...
+Writing file of feature information: iii_cazSDM_cnd_dbs_out/iii_cazSDM_cnd_dbs_out.features_info.txt
+Writing file of performance (representation, coverage, etc.) curves: iii_cazSDM_cnd_dbs_out/iii_cazSDM_cnd_dbs_out.curves.txt
+Writing output ranking as an image...
+Saving image: iii_cazSDM_cnd_dbs_out/iii_cazSDM_cnd_dbs_out.jpg (JPEG format)
+Writing ranking as a GIS raster map...
+Saving raster: iii_cazSDM_cnd_dbs_out/iii_cazSDM_cnd_dbs_out.rank.compressed.tif (GTiff format)
+ Note: not writing 'proportional loss map'
+Writing group curves file: iii_cazSDM_cnd_dbs_out/iii_cazSDM_cnd_dbs_out.grp_curves.txt
+No automated post-processing file specified
+============================================================
+Finished spatial prioritization process. Freeing data structures in memory...
+Finished at 3:25:22 PM (2017/10/18) 
+Elapsed time: 67501 ms == 0.0188 hours == 0.000781 days

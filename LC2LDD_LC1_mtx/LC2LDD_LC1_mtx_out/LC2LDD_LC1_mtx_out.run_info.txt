@@ -1,0 +1,246 @@
+Zonation 4.0.0rc1_compact, build: Sep 19 2014 18:16:13
+==========================================================================
+The Zonation software is distributed in the  hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+==========================================================================
+ For more information and conditions of use of this software, see the
+ disclaimer in Help->About Zonation, in the graphical user interface
+
+Starting Zonation run on 'DESKTOP-5OS0DJN' at 4:49:22 PM (2018/10/31) 
+Locale is: C
+Zonation core process parameters: 
+   run mode: normal run (-r)
+   settings file: LC2LDD_LC1_mtx.dat
+   biodiversity features list file: LC2LDD_LC1_mtx.spp
+   output file(s): LC2LDD_LC1_mtx_out/LC2LDD_LC1_mtx_out
+   info-gap alpha: 0.01
+   use_smoothing: 1
+   smoothing_alpha_multiplier: 1
+   autoclose (deprecated): 0
+
+Reading settings file: LC2LDD_LC1_mtx.dat
+   Option not overriden in command line, removal rule: 1
+   Option not overriden in command line, warp factor: 1
+
+Output settings:
+   Output weighted range size corrected richness map: yes
+   Output proportional loss rank map: no
+
+********** Arbitrary kernels not enabled ********
+
+*************** MASKING ANALYSIS AREAS FROM INPUT FILES **************
+********        Masking according to file ../data/BCR_mask.tif
+
+*************** USING SSI features/species **************
+  SSI list file = ssi_list.txt
+Loading list of biodiversity features from file: LC2LDD_LC1_mtx.spp
+Row count in the features/species list file: 3
+../data/SDM.tif: 956 rows, 1011 columns read. Nodata cells =  528060, sum of elements = 16479.9
+../data/BCR_mask.tif: 956 rows, 1011 columns read. Nodata cells =  762188, sum of elements = 204328
+Analysis area mask loaded.
+Loading SSI files list from ssi_list.txt
+Total SSI files = 2
+Total SSI observations x features (e.g. species) = 647
+Number of SSI features/species = 2
+
+Matrix columns/x dimension: 1011, rows/y dimension: 956
+*******************************************************
+Loading feature grouping information from groups.txt
+Groups information loaded.
+
+****** REMOVAL RULE: core-area Zonation (CAZ) *******
+
+****** NOT using Info-gap distribution discounting uncertainty analysis ****************
+
+
+*** Not using "drop 0 occurrence features", all features will be processed even if they do not occur anywhere in the analysis area.
+===============
+Note: using the following features which require additional memory for smoothing kernels: distribution smoothing , matrix connectivity
+Approximately 73.77 MBs of additional memory are required. Trying to allocate...
+Note: using 'matrix connectivity transform' with 0 features, which requires further additional memory: 3.815e-06 MBs
+Doing connectivity smoothings: initializing
+Using 1 thread(s) for preprocessing.
+Memory allocated successfully!
+===============
+
+======------ Allocating memory for input layers... ------======
+Using compact structure (lookup version),  sizeof(Occur_Container): 18, sizeof(allocated occurrence): 6
+Counting effective occurrencies
+Time: 1541018962 = 4:49:22 PM (2018/10/31) 
+Feature file #1: ../data/SDM.tif; non-missing cells: 202017
+Feature file #2: ../data/protected.tif; non-missing cells: 12736
+Feature file #3: ../data/SDM.tif; non-missing cells: 202017
+Total # of feature layers: 3
+Total # of cells in every layer: 966516
+Effective # of cells (cells with any occurrence, globally): 202207
+Total # of occurrencies: 416770, counted across 3 layers; average across layers: 138923
+Percentage of globally effective occurrencies = 68.7035 % (relative to total effective cells) = 14.3736 % (relative to total cells)
+Memory required for biodiversity features: 13.23 MB, of which base memory: 10.85 MB, and occurrencies require: 2.385 MB
+Time now: 1541018962 = 4:49:22 PM (2018/10/31) 
+Finished preload/counting effective occurrencies. Elapsed: 0 seconds.
+======------ Allocating memory for input layers: finished successfully ------======
+
+******=====----- Loading feature (e.g., species) data layers -----=====**********
+Used Info-gap robustness(alpha>0)/discounting; alpha=0.01 feature weight = 1
+../data/SDM.tif: fraction of original occurrences remaining after info-gap robustness, DISTRIBUTION DISCOUNTING = 0.76052
+* Loaded biodiversity feature file #1, ../data/SDM.tif, non-missing cells:202017, their sum: 7739.91
+Used Info-gap robustness(alpha>0)/discounting; alpha=0.01 feature weight = 1
+../data/protected.tif: fraction of original occurrences remaining after info-gap robustness, DISTRIBUTION DISCOUNTING = 0.99
+* Loaded biodiversity feature file #2, ../data/protected.tif, non-missing cells:12736, their sum: 12736
+Used Info-gap robustness(alpha>0)/discounting; alpha=0.01 feature weight = 1
+../data/SDM.tif: fraction of original occurrences remaining after info-gap robustness, DISTRIBUTION DISCOUNTING = 0.76052
+* Loaded biodiversity feature file #3, ../data/SDM.tif, non-missing cells:202017, their sum: 7739.91
+Calculating centers of the distributions of 3 features...
+
+******=====----- Distribution smoothing is on. Transforming input layers... -----=====******
+* Applying distribution smoothing on feature #1, ../data/SDM.tif
+DS connectivity calculations - Kernel calculated; alpha= 0.0004
+* Applying distribution smoothing on feature #3, ../data/SDM.tif
+DS connectivity calculations - Kernel calculated; alpha= 0.0004
+Freeing structures required for distribution smoothing... 
+ ...Done.
+******=====----- Finished distribution smoothing transformations in 2 seconds. -----=====******
+
+
+******=====----- 'load similarity matrix' is on, using similarity matrix for matrix connectivity transform (with 'apply to connectivity'). Transforming input layers... -----=====******
+
+Loading community connectivty similarity matrix from file community_matrix.txt
+Read similarity matrix with row count = 2, and same number of columns.
+Community similarity matrix loaded successfully from filecommunity_matrix.txt
+Applying community similarity matrix to connectivity
+DS connectivity calculations - Kernel calculated; alpha= 0.0004
+0 locations exceeded the connectivity threshold for maximum resource use density.
+Input feature 0 transformed via matrix connectivity calculations using alpha 0.000400.
+DS connectivity calculations - Kernel calculated; alpha= 0
+12736 locations exceeded the connectivity threshold for maximum resource use density.
+Input feature 1 transformed via matrix connectivity calculations using alpha 0.000000.
+******=====----- Finished matrix connectivity transformations in 1 seconds. -----=====******
+
+Freeing FFTWF structures... 
+ ...Done.
+
+******=====----- Finished loading and transformation of feature data layers -----=====*********
+
+SSI location in missing data area in SSI file ../data/ssi_CAWA2005.txt
+  2358693.568000 1385246.632000 -> 547 325 GRID:(gxc=1811000.000000 gyx=754328.125000 cs=1000.000000)
+SSI ../data/ssi_CAWA2005.txt count of successfully read locations = 504, parameter=1.000
+SSI location in missing data area in SSI file ../data/ssi_CAWA2010.txt
+  1926677.072000 1208216.338000 -> 115 502 GRID:(gxc=1811000.000000 gyx=754328.125000 cs=1000.000000)
+SSI ../data/ssi_CAWA2010.txt count of successfully read locations = 141, parameter=1.000
+* Completed load of SSI files;
+* Count of observations successfully read = 645
+* Count of SSI observations with errors in coordinates = 2
+First 10 SSI observations: x y feature_number occurrence_value
+788 191 0 0.001984
+422 231 0 0.001984
+772 236 1 0.007092
+772 236 0 0.001984
+772 236 0 0.001984
+872 256 0 0.001984
+232 267 0 0.001984
+846 283 0 0.001984
+846 283 1 0.007092
+434 298 0 0.001984
+Last 10 SSI observations: x y feature_number occurrence_value
+140 726 0 0.001984
+64 736 0 0.001984
+64 736 1 0.007092
+36 777 0 0.001984
+36 777 1 0.007092
+18 782 0 0.001984
+18 782 0 0.001984
+18 782 0 0.001984
+18 782 1 0.007092
+14 783 0 0.001984
+
+Calculating richness across biodiversity features...
+Done in 0 seconds. Time now: 4:49:25 PM (2018/10/31) 
+Saving raster map of weighted range size corrected richness
+Saving raster: LC2LDD_LC1_mtx_out/LC2LDD_LC1_mtx_out.wrscr.compressed.tif (GTiff format)
+
+******=====----- Preparing to start the ranking process... -----=====**********
+Note: using edge removal.
+
+Loaded data and initialized in 3 seconds. Current time: 4:49:25 PM (2018/10/31) 
+Cells with data = 202207; locations with missing values = 764309
+
+---------------------======********** RANKING STARTS HERE ***********======-----------------------
+Initially removed cells count = 0
+Note: No initial removal was used.
+
+Biodiversity features performance levels check. Proportions remaining:
+---------
+Feature 1: 1.000014
+Feature 2: 1.000087
+Feature 3: 1.000001
+-------------
+SSI feature: 1:    1
+SSI feature: 2:    1
+---------
+Minimum proportion remaining: 1.000001, average: 1.000034, weighted average: 1.000014, maximum: 1.000087
+
+
+The following lines provide information on how the ranking is done by iterative removal of cells, with 6 columns per line:
+Cells removed, proportion of landscape remaining, cost of remaining landscape, edge list length, smallest remaining proportion in all biodiversity features (e.g. species), time elapsed (s)
+----------------------------------------------------------------------------------------------------------------------------
+             0            100%%              0          12727              1            0
+          8088        96.0002%%         194120          11404       0.974096            2
+         16176        92.0003%%         186032          11645       0.952894            5
+         24264        88.0005%%         177944          10755       0.921563            8
+         32352        84.0006%%         169856           9884       0.885834           11
+         40440        80.0008%%         161768           9269       0.850655           13
+         48528         76.001%%         153680           8419       0.819089           16
+         56616        72.0011%%         145592           8039       0.772288           19
+         64704        68.0013%%         137504           7562       0.728628           22
+         72792        64.0014%%         129416           7162       0.670285           24
+         80880        60.0016%%         121328           7199       0.620265           28
+         88968        56.0017%%         113240           7482       0.583044           31
+         97056        52.0019%%         105152           7335       0.534359           35
+        105144        48.0021%%          97064           7169       0.494704           38
+        113232        44.0022%%          88976           7110       0.460389           42
+        121320        40.0024%%          80888           6847       0.420341           46
+        129408        36.0025%%          72800           6209       0.378881           50
+        137496        32.0027%%          64712           5750        0.34111           54
+        145584        28.0028%%          56624           5500       0.315433           59
+        153672         24.003%%          48536           5155        0.28206           63
+        161760        20.0032%%          40448           4863       0.238008           68
+        169848        16.0033%%          32360           4814       0.204164           73
+        177936        12.0035%%          24272           4333       0.173775           78
+        186024        8.00364%%          16184           3478       0.130272           84
+        194112         4.0038%%           8096           2220       0.060935           91
+        202200     0.00395775%%              8              8    0.000112727           97
+        202207              0%%              0              0              0           97
+----------------------------------------------------------------------------------------------------------------------------
+Total count of cells removed = 202207
+
+Done in 97 seconds.
+Found 43137 ties.
+
+Biodiversity features performance levels check. Proportions remaining:
+---------
+Feature 1:    0
+Feature 2:    0
+Feature 3:    0
+-------------
+SSI feature: 1:    0
+SSI feature: 2:    0
+---------
+Minimum proportion remaining:    0, average:    0, weighted average:    0, maximum:    0
+
+============================================================
+* Writing final output files...
+Writing file of feature information: LC2LDD_LC1_mtx_out/LC2LDD_LC1_mtx_out.features_info.txt
+Writing file of performance (representation, coverage, etc.) curves: LC2LDD_LC1_mtx_out/LC2LDD_LC1_mtx_out.curves.txt
+Writing output ranking as an image...
+Saving image: LC2LDD_LC1_mtx_out/LC2LDD_LC1_mtx_out.jpg (JPEG format)
+Writing ranking as a GIS raster map...
+Saving raster: LC2LDD_LC1_mtx_out/LC2LDD_LC1_mtx_out.rank.compressed.tif (GTiff format)
+ Note: not writing 'proportional loss map'
+Writing file of SSI feature information and performance (representation, coverage, etc.) curves: LC2LDD_LC1_mtx_out/LC2LDD_LC1_mtx_out.SSI_features_info.txt
+Writing group curves file: LC2LDD_LC1_mtx_out/LC2LDD_LC1_mtx_out.grp_curves.txt
+No automated post-processing file specified
+============================================================
+Finished spatial prioritization process. Freeing data structures in memory...
+Finished at 4:51:03 PM (2018/10/31) 
+Elapsed time: 100475 ms == 0.0279 hours == 0.00116 days

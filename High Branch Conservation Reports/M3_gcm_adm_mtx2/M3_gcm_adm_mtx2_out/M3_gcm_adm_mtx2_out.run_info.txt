@@ -1,0 +1,229 @@
+Zonation 4.0.0rc1_compact, build: Sep 19 2014 18:16:13
+==========================================================================
+The Zonation software is distributed in the  hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+==========================================================================
+ For more information and conditions of use of this software, see the
+ disclaimer in Help->About Zonation, in the graphical user interface
+
+Starting Zonation run on 'DESKTOP-UULFA30' at 12:29:49 PM (2017/11/2) 
+Locale is: C
+Zonation core process parameters: 
+   run mode: normal run (-r)
+   settings file: M3_gcm_adm_mtx2.dat
+   biodiversity features list file: M3_gcm_adm_mtx2.spp
+   output file(s): M3_gcm_adm_mtx2_out/M3_gcm_adm_mtx2_out
+   info-gap alpha: 0.01
+   use_smoothing: 1
+   smoothing_alpha_multiplier: 1
+   autoclose (deprecated): 0
+
+Reading settings file: M3_gcm_adm_mtx2.dat
+   Option not overriden in command line, removal rule: 1
+   Option not overriden in command line, warp factor: 1
+
+Output settings:
+   Output weighted range size corrected richness map: yes
+   Output proportional loss rank map: no
+
+********** Arbitrary kernels not enabled ********
+
+*************** MASKING ANALYSIS AREAS FROM INPUT FILES **************
+********        Masking according to file ../data/BCR_mask.tif
+
+ADMU feature weights cannot be computed from condition because groups and/or condition are not used.
+WARNING ADMU weight calculation has been switched off.
+
+ADMU mode = 2; Wg=0.25
+Loading list of biodiversity features from file: M3_gcm_adm_mtx2.spp
+Row count in the features/species list file: 4
+**** NEGATIVE weights encountred in features/species list file; => running in MCZ multicriterion mode. ****
+
+../data/SDM.tif: 956 rows, 1011 columns read. Nodata cells =  528060, sum of elements = 16479.9
+../data/BCR_mask.tif: 956 rows, 1011 columns read. Nodata cells =  762188, sum of elements = 204328
+Analysis area mask loaded.
+
+Matrix columns/x dimension: 1011, rows/y dimension: 956
+
+LOADING ADMINISTRATIVE UNITS (ADMU) INFO
+Loading ADMU descriptions and weights from file ADMU_descriptions.txt
+ADMU descriptions list file successfully loaded; count of ADMUs = 2
+Loading ADMU weight matrix file ADMU_weights.txt
+(4) ADMU features x (2 )ADMUs weights matrix successfully loaded, with matching feature and ADMU counts 
+../data/tenures.tif: 956 rows, 1011 columns read. Nodata cells =  3930, sum of elements = -1.31318e+10
+Map of administrative units loaded successfully.
+Locations with ok ADMU number = 127171
+Locations with missing or failed ADMU number = 839345
+
+ADMU LOAD COMPLETED
+Identified 2 administrative units
+ADMU COMBINED WEIGHTS COMPUTED.
+ADMU row count for per ADMU curves: 0
+Administrative units successfully loaded.
+
+*******************************************************
+Loading feature grouping information from groups.txt
+Groups information loaded.
+
+****** REMOVAL RULE: core-area Zonation (CAZ) *******
+
+****** NOT using Info-gap distribution discounting uncertainty analysis ****************
+
+
+*** Not using "drop 0 occurrence features", all features will be processed even if they do not occur anywhere in the analysis area.
+===============
+Note: using the following features which require additional memory for smoothing kernels: distribution smoothing , matrix connectivity
+Approximately 73.77 MBs of additional memory are required. Trying to allocate...
+Note: using 'matrix connectivity transform' with 0 features, which requires further additional memory: 3.815e-06 MBs
+Doing connectivity smoothings: initializing
+Using 1 thread(s) for preprocessing.
+Memory allocated successfully!
+===============
+
+======------ Allocating memory for input layers... ------======
+Using compact structure (lookup version),  sizeof(Occur_Container): 18, sizeof(allocated occurrence): 6
+Counting effective occurrencies
+Time: 1509636589 = 12:29:49 PM (2017/11/2) 
+Feature file #1: ../data/SDM.tif; non-missing cells: 202017
+Feature file #2: ../data/protected.tif; non-missing cells: 12736
+Feature file #3: ../data/wetlands.tif; non-missing cells: 14177
+Feature file #4: ../data/uplands.tif; non-missing cells: 180363
+Total # of feature layers: 4
+Total # of cells in every layer: 966516
+Effective # of cells (cells with any occurrence, globally): 203300
+Total # of occurrencies: 409293, counted across 4 layers; average across layers: 102323
+Percentage of globally effective occurrencies = 50.3312 % (relative to total effective cells) = 10.5868 % (relative to total cells)
+Memory required for biodiversity features: 13.21 MB, of which base memory: 10.86 MB, and occurrencies require: 2.342 MB
+Time now: 1509636590 = 12:29:50 PM (2017/11/2) 
+Finished preload/counting effective occurrencies. Elapsed: 1 seconds.
+======------ Allocating memory for input layers: finished successfully ------======
+
+******=====----- Loading feature (e.g., species) data layers -----=====**********
+Used Info-gap robustness(alpha>0)/discounting; alpha=0.01 feature weight = 1
+../data/SDM.tif: fraction of original occurrences remaining after info-gap robustness, DISTRIBUTION DISCOUNTING = 0.76052
+* Loaded biodiversity feature file #1, ../data/SDM.tif, non-missing cells:202017, their sum: 7739.91
+Used Info-gap robustness(alpha>0)/discounting; alpha=0.01 feature weight = 1
+../data/protected.tif: fraction of original occurrences remaining after info-gap robustness, DISTRIBUTION DISCOUNTING = 0.99
+* Loaded biodiversity feature file #2, ../data/protected.tif, non-missing cells:12736, their sum: 12736
+Used Info-gap robustness(alpha>0)/discounting; alpha=0.01 feature weight = 1
+../data/wetlands.tif: fraction of original occurrences remaining after info-gap robustness, DISTRIBUTION DISCOUNTING = 0.99
+* Loaded biodiversity feature file #3, ../data/wetlands.tif, non-missing cells:14177, their sum: 14177
+Used Info-gap robustness(alpha>0)/discounting; alpha=0.01 feature weight = 1
+../data/uplands.tif: fraction of original occurrences remaining after info-gap robustness, DISTRIBUTION DISCOUNTING = 0.99
+* Loaded biodiversity feature file #4, ../data/uplands.tif, non-missing cells:180363, their sum: 180363
+Calculating centers of the distributions of 4 features...
+
+******=====----- Distribution smoothing is on. Transforming input layers... -----=====******
+* Applying distribution smoothing on feature #1, ../data/SDM.tif
+DS connectivity calculations - Kernel calculated; alpha= 0.0004
+Freeing structures required for distribution smoothing... 
+ ...Done.
+******=====----- Finished distribution smoothing transformations in 1 seconds. -----=====******
+
+
+******=====----- 'load similarity matrix' is on, using similarity matrix for matrix connectivity transform (with 'apply to connectivity'). Transforming input layers... -----=====******
+
+Loading community connectivty similarity matrix from file community_matrix.txt
+showmessage: Similarity matrix load failed: negative numbers not allowed -1.0
+Error loading community similarity matrixcommunity_matrix.txt
+******=====----- Finished matrix connectivity transformations in 0 seconds. -----=====******
+
+Freeing FFTWF structures... 
+ ...Done.
+
+******=====----- Finished loading and transformation of feature data layers -----=====*********
+
+Calculating richness across biodiversity features...
+Done in 0 seconds. Time now: 12:29:51 PM (2017/11/2) 
+Saving raster map of weighted range size corrected richness
+Saving raster: M3_gcm_adm_mtx2_out/M3_gcm_adm_mtx2_out.wrscr.compressed.tif (GTiff format)
+
+******=====----- Preparing to start the ranking process... -----=====**********
+Note: using edge removal.
+
+Checking area and effective cells within administrative units...
+Admin. unit 0 (id: 0), area: 135865.000000, 135865 effective cells
+Admin. unit 1 (id: 1), area: 67435.000000, 67435 effective cells
+
+
+Loaded data and initialized in 2 seconds. Current time: 12:29:51 PM (2017/11/2) 
+Cells with data = 203300; locations with missing values = 763216
+
+---------------------======********** RANKING STARTS HERE ***********======-----------------------
+Initially removed cells count = 0
+Note: No initial removal was used.
+
+Biodiversity features performance levels check. Proportions remaining:
+---------
+Feature 1: 1.000001
+Feature 2:    1
+Feature 3:    1
+Feature 4:    1
+---------
+Minimum proportion remaining:    1, average:    1, weighted average:  inf, maximum: 1.000001
+
+
+The following lines provide information on how the ranking is done by iterative removal of cells, with 6 columns per line:
+Cells removed, proportion of landscape remaining, cost of remaining landscape, edge list length, smallest remaining proportion in all biodiversity features (e.g. species), time elapsed (s)
+----------------------------------------------------------------------------------------------------------------------------
+             0            100%%              0          12729              1            0
+          8132             96%%         195169          14885       0.969384          152
+         16264             92%%         187037          13533       0.932115          321
+         24396        88.0001%%         178905          12978       0.895367          473
+         32528        84.0001%%         170773          13348       0.856761          618
+         40660        80.0001%%         162641          14068       0.817285          782
+         48792        76.0001%%         154509          14256        0.77797          966
+         56924        72.0001%%         146377          14614       0.738439         1161
+         65056        68.0002%%         138245          15747       0.698175         1357
+         73188        64.0002%%         130113          16712       0.657402         1564
+         81320        60.0002%%         121981          17943       0.616085         1788
+         89452        56.0002%%         113849          18635       0.575146         2022
+         97584        52.0002%%         105717          19502        0.53384         2260
+        105716        48.0003%%          97585          20123       0.492895         2496
+        113848        44.0003%%          89453          21277       0.452083         2743
+        121980        40.0003%%          81321          21749       0.411088         2999
+        130112        36.0003%%          73189          21865       0.368679         3267
+        138244        32.0003%%          65057          21432       0.325721         3560
+        146376        28.0004%%          56925          20408       0.282891         3818
+        154508        24.0004%%          48793          17482       0.239794         4051
+        162640        20.0004%%          40661          16303        0.19723         4250
+        170772        16.0004%%          32529          14817       0.153413         4433
+        178904        12.0004%%          24397          12946       0.109751         4595
+        187036        8.00045%%          16265          10521      0.0659559         4734
+        195168        4.00047%%           8133           5862      0.0314311         4848
+        203300    0.000494719%%              1              1    5.54437e-06         4896
+        203300              0%%              0              0              0         4896
+----------------------------------------------------------------------------------------------------------------------------
+Total count of cells removed = 203300
+
+Done in 4896 seconds.
+Found 131292 ties.
+
+Biodiversity features performance levels check. Proportions remaining:
+---------
+Feature 1:    0
+Feature 2:    0
+Feature 3:    0
+Feature 4:    0
+---------
+Minimum proportion remaining:    0, average:    0, weighted average:  nan, maximum:    0
+
+============================================================
+* Writing final output files...
+Writing file of feature information: M3_gcm_adm_mtx2_out/M3_gcm_adm_mtx2_out.features_info.txt
+Writing file of performance (representation, coverage, etc.) curves: M3_gcm_adm_mtx2_out/M3_gcm_adm_mtx2_out.curves.txt
+Writing output ranking as an image...
+Saving image: M3_gcm_adm_mtx2_out/M3_gcm_adm_mtx2_out.jpg (JPEG format)
+Writing ranking as a GIS raster map...
+Saving raster: M3_gcm_adm_mtx2_out/M3_gcm_adm_mtx2_out.rank.compressed.tif (GTiff format)
+ Note: not writing 'proportional loss map'
+Preparing redistributed rank map for administrative units...
+Writing redistributed rank map for administrative units: M3_gcm_adm_mtx2_out/M3_gcm_adm_mtx2_out.ADMU.redistributed.rank.asc
+Saving raster: M3_gcm_adm_mtx2_out/M3_gcm_adm_mtx2_out.ADMU.redistributed.rank.compressed.tif (GTiff format)
+Writing group curves file: M3_gcm_adm_mtx2_out/M3_gcm_adm_mtx2_out.grp_curves.txt
+No automated post-processing file specified
+============================================================
+Finished spatial prioritization process. Freeing data structures in memory...
+Finished at 1:51:29 PM (2017/11/2) 
+Elapsed time: 4899921 ms == 1.36 hours == 0.0567 days

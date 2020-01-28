@@ -1,0 +1,26 @@
+[Settings]
+removal rule = 1
+warp factor  = 1
+edge removal = 1
+annotate name = 0
+
+mask missing areas = 1
+area mask file  = ../data/BCR_mask.tif
+
+info-gap proportional = 0
+use info-gap weights = 1
+info-gap weights file = uncertaintyweights.txt
+
+use groups = 1
+groups file = groups.txt
+
+use SSI = 1
+SSI file name = ssi_list.txt
+
+[Community analysis settings]
+load similarity matrix = 1
+connectivity similarity matrix file = community_matrix.txt
+apply to connectivity = 1
+
+use interactions = 1
+interaction file = "interactions.txt"

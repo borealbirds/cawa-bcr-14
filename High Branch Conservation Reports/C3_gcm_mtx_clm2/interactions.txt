@@ -1,0 +1,7 @@
+2   3  0.000006  1  1
+
+
+
+# column 1 is focal feature map (the map that is transformed);
+# 2 is feature map that the first feature is connected to;
+# column 3 is beta value; column 4 is positive or negative; column 5 is gamma

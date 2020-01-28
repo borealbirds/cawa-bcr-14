@@ -1,0 +1,7 @@
+1.0	-1.0 0.0 0.5
+-1.0	1.0 0.0 0.0
+0.0 0.0 1.0 0.0
+0.5 0.0 0.0 1.0
+
+##needs to be a row for each feature, showing similarity between community types or
+##how many features of community type A are present in community type B, etc.

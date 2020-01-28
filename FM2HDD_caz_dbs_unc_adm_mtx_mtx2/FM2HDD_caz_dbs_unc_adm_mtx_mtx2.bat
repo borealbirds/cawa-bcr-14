@@ -1,0 +1,1 @@
+call zig4.exe -r FM2HDD_caz_dbs_unc_adm_mtx_mtx2.dat FM2HDD_caz_dbs_unc_adm_mtx_mtx2.spp FM2HDD_caz_dbs_unc_adm_mtx_mtx2_out/FM2HDD_caz_dbs_unc_adm_mtx_mtx2_out.txt 0.01 1 1.0 0  --grid-output-formats compressed-tif
