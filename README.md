@@ -9,9 +9,9 @@ This work is published in several locations:
 
 Westwood, AR, Lambert, JD, Reitsma, LR, Stralberg D. In Press. Prioritizing areas for land conservation and forest management planning for the threatened Canada Warbler (Cardellina canadensis) in the Atlantic Northern Forest of Canada. Diversity.
 
-Two prior reports relating to this work have been published, including one on [habitat management guidelines for the Canada Warbler] (https://zenodo.org/record/2435733) and [prioritizing areas for conservation and management for the Canada Warbler] (https://zenodo.org/record/3251109). 
+Two prior reports relating to this work have been published, including one on [habitat management guidelines for the Canada Warbler](https://zenodo.org/record/2435733) and [prioritizing areas for conservation and management for the Canada Warbler](https://zenodo.org/record/3251109). 
 
-This github repository includes data and code only: Please refer to the paper and reports for explanations of variables, interpretations, and updates. The methodology on this page is that used in Westwood et al. 2020 Diversity. The methodology used in the report can be found [here] (/High Branch Conservation Reports/CAWA BCR14 Zonation report - metadata and workflow). 
+This github repository includes data and code only: Please refer to the paper and reports for explanations of variables, interpretations, and updates. The methodology on this page is that used in Westwood et al. 2020 Diversity. The methodology used in the report can be found [here](/High Branch Conservation Reports/CAWA BCR14 Zonation report - metadata and workflow). 
 
 _Project collaborators:_  
 Alana Westwood (PI), alana.westwood@hotmail.com
