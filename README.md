@@ -30,7 +30,7 @@ All data layers were assembled using ArcGIS 10.3 in a common geodatabase, [BAM_C
 _Environments for all rasters were set to a common extent (sdm.tif) and snap raster, exported at a resolution of 1 km2 with no data values = -9999. Zeroes were assigned as nodata. ArcGIS tools are indicated using ' '_
 
 | Data layer | Layer description | Layer creation steps | Pre-processing for Zonation | Original data ownership and source |
-| :------------- | :------------- ||
+| :--------- | :---------------- |  :------------------ |  :------------------------- |  :-------------------------------- |
 | [BCR14_mask.tif](/data/BCR14_mask.tif) | Canadian portion of Bird Conservation Region (BCR) 14 | Clipped the international BCR14 polygon layer to the extent of BCR14, then to the boundaries of Canada. 2 km buffer was added to the perimeter to account for cross-border data (if available) and discrepancies with georeferencing alignment between datasets. Field code added and all land mass coded as 1 | 'Feature to raster' | [North American Bird Conservation Initiative](http://www.nabci.net/Canada/English/bird_conservation_regions.html) |
 | [protected.tif](/data/protected.tif) | National, provincial, and privately protected areas ranked as IUCN category I-IV recorded in the CARTS Conservation Areas Reporting and Tracking System (CARTS) geodatabase | Added field to attribute table and coded all protected areas as "1" | 'Feature to raster' | [CARTS 2015](http://www.ccea.org/carts) |
 | [tenures.tif](/data/tenures.tif) | Extent of areas owned or leased (on Crown land) by forestry companies for industrial harvesting as identified by Global Forest Watch (GFW) | Isolated forestry tenures by category and merged. Added attribute field and coded all forestry tenures polygons = 1 | 'Feature to raster' |  [Global Forest Watch Canada](https://www.globalforestwatch.ca/node/273) |
@@ -51,7 +51,7 @@ _Steps completed in [Zonation 4.0](https://github.com/cbig/zonation-core)_.
 
 Six models were completed (Table 1), each at one of three dispersal distances: low (LDD = 5 km), medium (MDD = 10 km), and high (HDD = 50 km). The first model (LC1) was built in steps to evaluate the impact of each additive function. 
 
-![Table of Canada Warbler prioritization models](model table.jpg)
+![Table of Canada Warbler prioritization models](model_table.jpg)
 
 1. Features
 
