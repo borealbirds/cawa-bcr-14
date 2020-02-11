@@ -51,7 +51,7 @@ _Steps completed in [Zonation 4.0](https://github.com/cbig/zonation-core)_.
 
 Six models were completed (Table 1), each at one of three dispersal distances: low (LDD = 5 km), medium (MDD = 10 km), and high (HDD = 50 km). The first model (LC1) was built in steps to evaluate the impact of each additive function.
 
-![Table of Canada Warbler prioritization models](Model_photos/model_table.jpg)
+![Table of Canada Warbler prioritization models](https://raw.githubusercontent.com/borealbirds/cawa-bcr-14/master/Model_photos/model_table.JPG)
 
 
 ### Variants
